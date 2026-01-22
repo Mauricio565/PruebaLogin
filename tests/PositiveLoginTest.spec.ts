@@ -29,15 +29,5 @@ test('positive login test', async ({ page }) => {
 
 });
 
-test('Negative username test', async ({ page }) => {
-    await loginPage.login(testData.usuarioincorrecto.username, testData.usuarioexistente.password);
-    await utils.CheckTextIsVisible('Your username is invalid!');
 
 
-
-});
-
-test('Negative password test', async ({ page }) => {
-    await loginPage.login(testData.usuarioexistente.username, testData.usuarioincorrecto.password);
-    await utils.CheckTextIsVisible('Your password is invalid!');
-});
